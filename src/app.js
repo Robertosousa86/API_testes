@@ -1,22 +1,8 @@
 import express from "express";
+import routes from "./routes";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send({
-    firstServer: "Only for test",
-    Status: "OK!",
-  });
-});
-
-app.get("/products", (req, res) => {
-  res.send([
-    {
-      name: "Default product",
-      description: "product description",
-      price: 100,
-    },
-  ]);
-});
+app.use("/", routes);
 
 export default app;
