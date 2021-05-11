@@ -13,4 +13,18 @@ describe("Routes: Products", () => {
       });
     });
   });
+
+  const defaultResponse = {
+    firstServer: "Only for test",
+    Status: "OK!",
+  };
+
+  describe("GET /", () => {
+    it("should return default response", (done) => {
+      request.get("/").end((err, res) => {
+        expect(res.body).to.eql(defaultResponse);
+        done(err);
+      });
+    });
+  });
 });
