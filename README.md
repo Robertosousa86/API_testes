@@ -1,3 +1,3 @@
 # API_testes
 
-## Uma Api de domínio de loja virtutal.
+## Uma Api de domínio de loja virtual.
