@@ -1,3 +1,4 @@
+// Rota de recurso products
 import express from "express";
 
 const router = express.Router();

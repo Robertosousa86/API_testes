@@ -1,3 +1,4 @@
+// Tem a responsábilidade de iniciar e carregar os middlewares
 import express from "express";
 import routes from "./routes";
 

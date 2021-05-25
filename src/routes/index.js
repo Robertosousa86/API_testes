@@ -1,3 +1,4 @@
+// Clasee responsável por carregar todas rotas da aplicação
 import express from "express";
 import productsRoute from "./products";
 
