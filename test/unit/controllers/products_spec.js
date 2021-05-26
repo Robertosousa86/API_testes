@@ -24,7 +24,7 @@ describe("Controllers: Products", () => {
       productsController.get(request, response);
 
       expect(response.send.called).to.be.true;
-      expect(response.send.calledWith(productsController)).to.be.true;
+      expect(response.send.calledWith(defaultProduct)).to.be.true;
     });
   });
 });
