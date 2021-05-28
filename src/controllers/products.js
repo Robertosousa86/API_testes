@@ -3,8 +3,8 @@ class ProductsController {
   get(req, res) {
     return res.send([
       {
-        name: "Default product",
-        description: "product description",
+        name: 'Default product',
+        description: 'product description',
         price: 100,
       },
     ]);

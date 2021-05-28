@@ -1,15 +1,15 @@
 // Clasee responsável por carregar todas rotas da aplicação
-import express from "express";
-import productsRoute from "./products";
+import express from 'express';
+import productsRoute from './products';
 
 const router = express.Router();
 
-router.use("/products", productsRoute);
+router.use('/products', productsRoute);
 
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   res.send({
-    firstServer: "Only for test",
-    Status: "OK!",
+    firstServer: 'Only for test',
+    Status: 'OK!',
   });
 });
 
