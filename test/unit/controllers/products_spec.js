@@ -1,6 +1,7 @@
 // Engloba todos os testes do controller de products.
 import sinon from 'sinon';
 import ProductsController from '../../../src/controllers/products';
+import Product from '../../../src/models/product';
 
 describe('Controllers: Products', () => {
   // informações estáticas que serão reaproveitadas para testes
@@ -13,18 +14,22 @@ describe('Controllers: Products', () => {
   ];
 
   describe('get() products', () => {
-    it('Should return a list of products', () => {
+    it('Should return a list of products', async () => {
       const request = {};
       // os spies permitem gravar informações como quantas vezes uma função foi chamada, quais parâmetros ela recebeu e etc.
       const response = {
         send: sinon.spy(),
       };
 
-      const productsController = new ProductsController();
-      productsController.get(request, response);
+      Product.find = sinon.stub();
 
-      expect(response.send.called).to.be.true;
-      expect(response.send.calledWith(defaultProduct)).to.be.true;
+      Product.find.withArgs({}).resolves(defaultProduct);
+
+      const productsController = new ProductsController(Product);
+
+      await productsController.get(request, response);
+
+      sinon.assert.calledWith(response.send, defaultProduct);
     });
   });
 });
