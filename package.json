@@ -52,12 +52,23 @@
       "mocha": true
     },
     "rules": {
-     "prettier/prettier": "warn",
-     "eqeqeq":"warn"
+      "prettier/prettier": "warn",
+      "eqeqeq": "warn"
     }
   },
   "prettier": {
     "singleQuote": true,
     "printWidth": 120
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robertosousa86/API_testes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Robertosousa86/API_testes/issues"
+  },
+  "homepage": "https://github.com/Robertosousa86/API_testes#readme"
 }
